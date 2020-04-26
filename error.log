@@ -1,0 +1,678 @@
+In file included from GUI.h:11,
+                 from Simple_window.h:2,
+                 from test1.cpp:1:
+Graph.h:159:24: warning: narrowing conversion of ‘fl_color()’ from ‘Fl_Color’ {aka ‘unsigned int’} to ‘int’ [-Wnarrowing]
+  159 |  Color lcolor {fl_color()};
+      |                ~~~~~~~~^~
+In file included from test1.cpp:1:
+Simple_window.h:9:24: error: reference to ‘Window’ is ambiguous
+    9 | struct Simple_window : Window {
+      |                        ^~~~~~
+In file included from GUI.h:10,
+                 from Simple_window.h:2,
+                 from test1.cpp:1:
+Window.h:16:7: note: candidates are: ‘class Graph_lib::Window’
+   16 | class Window : public Fl_Window {
+      |       ^~~~~~
+In file included from /usr/include/X11/Xlib.h:44,
+                 from /usr/include/FL/x.H:37,
+                 from /usr/include/FL/fl_draw.H:27,
+                 from fltk.h:10,
+                 from Window.h:4,
+                 from GUI.h:10,
+                 from Simple_window.h:2,
+                 from test1.cpp:1:
+/usr/include/X11/X.h:96:13: note:                 ‘typedef XID Window’
+   96 | typedef XID Window;
+      |             ^~~~~~
+In file included from test1.cpp:1:
+Simple_window.h: In constructor ‘Simple_window::Simple_window(Graph_lib::Point, int, int, const string&)’:
+Simple_window.h:11:4: error: class ‘Simple_window’ does not have any field named ‘Window’
+   11 |  : Window(xy,w,h,title),
+      |    ^~~~~~
+Simple_window.h:13:34: error: no matching function for call to ‘Graph_lib::Point::Point(int, int)’
+   13 |    next_button(Point(x_max()-70,0), 70, 20, "Next", cb_next) { attach(next_button); }
+      |                                  ^
+In file included from Window.h:8,
+                 from GUI.h:10,
+                 from Simple_window.h:2,
+                 from test1.cpp:1:
+Point.h:9:8: note: candidate: ‘Graph_lib::Point::Point()’
+    9 | struct Point {
+      |        ^~~~~
+Point.h:9:8: note:   candidate expects 0 arguments, 2 provided
+Point.h:9:8: note: candidate: ‘constexpr Graph_lib::Point::Point(const Graph_lib::Point&)’
+Point.h:9:8: note:   candidate expects 1 argument, 2 provided
+Point.h:9:8: note: candidate: ‘constexpr Graph_lib::Point::Point(Graph_lib::Point&&)’
+Point.h:9:8: note:   candidate expects 1 argument, 2 provided
+In file included from test1.cpp:1:
+Simple_window.h:13:64: error: ‘attach’ was not declared in this scope; did you mean ‘atanh’?
+   13 |    next_button(Point(x_max()-70,0), 70, 20, "Next", cb_next) { attach(next_button); }
+      |                                                                ^~~~~~
+      |                                                                atanh
+test1.cpp: In function ‘int main()’:
+test1.cpp:15:9: error: ‘struct Simple_window’ has no member named ‘attach’
+   15 |     win.attach(poly);
+      |         ^~~~~~
+In file included from GUI.h:11,
+                 from Simple_window.h:2,
+                 from Simple_window.cpp:7:
+Graph.h:159:24: warning: narrowing conversion of ‘fl_color()’ from ‘Fl_Color’ {aka ‘unsigned int’} to ‘int’ [-Wnarrowing]
+  159 |  Color lcolor {fl_color()};
+      |                ~~~~~~~~^~
+In file included from Simple_window.cpp:7:
+Simple_window.h:9:24: error: reference to ‘Window’ is ambiguous
+    9 | struct Simple_window : Window {
+      |                        ^~~~~~
+In file included from GUI.h:10,
+                 from Simple_window.h:2,
+                 from Simple_window.cpp:7:
+Window.h:16:7: note: candidates are: ‘class Graph_lib::Window’
+   16 | class Window : public Fl_Window {
+      |       ^~~~~~
+In file included from /usr/include/X11/Xlib.h:44,
+                 from /usr/include/FL/x.H:37,
+                 from /usr/include/FL/fl_draw.H:27,
+                 from fltk.h:10,
+                 from Window.h:4,
+                 from GUI.h:10,
+                 from Simple_window.h:2,
+                 from Simple_window.cpp:7:
+/usr/include/X11/X.h:96:13: note:                 ‘typedef XID Window’
+   96 | typedef XID Window;
+      |             ^~~~~~
+In file included from Simple_window.cpp:7:
+Simple_window.h: In constructor ‘Simple_window::Simple_window(Graph_lib::Point, int, int, const string&)’:
+Simple_window.h:11:4: error: class ‘Simple_window’ does not have any field named ‘Window’
+   11 |  : Window(xy,w,h,title),
+      |    ^~~~~~
+Simple_window.h:13:34: error: no matching function for call to ‘Graph_lib::Point::Point(int, int)’
+   13 |    next_button(Point(x_max()-70,0), 70, 20, "Next", cb_next) { attach(next_button); }
+      |                                  ^
+In file included from Window.h:8,
+                 from GUI.h:10,
+                 from Simple_window.h:2,
+                 from Simple_window.cpp:7:
+Point.h:9:8: note: candidate: ‘Graph_lib::Point::Point()’
+    9 | struct Point {
+      |        ^~~~~
+Point.h:9:8: note:   candidate expects 0 arguments, 2 provided
+Point.h:9:8: note: candidate: ‘constexpr Graph_lib::Point::Point(const Graph_lib::Point&)’
+Point.h:9:8: note:   candidate expects 1 argument, 2 provided
+Point.h:9:8: note: candidate: ‘constexpr Graph_lib::Point::Point(Graph_lib::Point&&)’
+Point.h:9:8: note:   candidate expects 1 argument, 2 provided
+In file included from Simple_window.cpp:7:
+Simple_window.h:13:64: error: ‘attach’ was not declared in this scope; did you mean ‘atanh’?
+   13 |    next_button(Point(x_max()-70,0), 70, 20, "Next", cb_next) { attach(next_button); }
+      |                                                                ^~~~~~
+      |                                                                atanh
+Simple_window.cpp: At global scope:
+Simple_window.cpp:11:1: error: redefinition of ‘Simple_window::Simple_window(Graph_lib::Point, int, int, const string&)’
+   11 | Simple_window::Simple_window(Point xy, int w, int h, const string& title) :
+      | ^~~~~~~~~~~~~
+In file included from Simple_window.cpp:7:
+Simple_window.h:10:2: note: ‘Simple_window::Simple_window(Graph_lib::Point, int, int, const string&)’ previously defined here
+   10 |  Simple_window(Point xy, int w, int h, const string& title )
+      |  ^~~~~~~~~~~~~
+Simple_window.cpp:21:6: error: no declaration matches ‘bool Simple_window::wait_for_button()’
+   21 | bool Simple_window::wait_for_button()
+      |      ^~~~~~~~~~~~~
+In file included from Simple_window.cpp:7:
+Simple_window.h:15:7: note: candidate is: ‘void Simple_window::wait_for_button()’
+   15 |  void wait_for_button()
+      |       ^~~~~~~~~~~~~~~
+Simple_window.h:9:8: note: ‘struct Simple_window’ defined here
+    9 | struct Simple_window : Window {
+      |        ^~~~~~~~~~~~~
+Simple_window.cpp:42:6: error: redefinition of ‘static void Simple_window::cb_next(Graph_lib::Address, Graph_lib::Address)’
+   42 | void Simple_window::cb_next(Address, Address pw)
+      |      ^~~~~~~~~~~~~
+In file included from Simple_window.cpp:7:
+Simple_window.h:29:14: note: ‘static void Simple_window::cb_next(Graph_lib::Address, Graph_lib::Address)’ previously defined here
+   29 |  static void cb_next(Address, Address addr) // callback for next_button
+      |              ^~~~~~~
+Simple_window.cpp:50:6: error: redefinition of ‘void Simple_window::next()’
+   50 | void Simple_window::next()
+      |      ^~~~~~~~~~~~~
+In file included from Simple_window.cpp:7:
+Simple_window.h:35:7: note: ‘void Simple_window::next()’ previously defined here
+   35 |  void next() { button_pushed = true; }
+      |       ^~~~
+In file included from Graph.cpp:1:
+Graph.h:89:2: error: ‘vector’ does not name a type
+   89 |  vector<T*> v;
+      |  ^~~~~~
+Graph.h:90:2: error: ‘vector’ does not name a type
+   90 |  vector<T*> owned;
+      |  ^~~~~~
+Graph.h: In destructor ‘Graph_lib::Vector_ref<T>::~Vector_ref()’:
+Graph.h:102:34: error: ‘owned’ was not declared in this scope
+  102 |  ~Vector_ref() { for (int i=0; i<owned.size(); ++i) delete owned[i]; }
+      |                                  ^~~~~
+Graph.h: In member function ‘void Graph_lib::Vector_ref<T>::push_back(T&)’:
+Graph.h:104:25: error: ‘v’ was not declared in this scope
+  104 |  void push_back(T& s) { v.push_back(&s); }
+      |                         ^
+Graph.h: In member function ‘void Graph_lib::Vector_ref<T>::push_back(T*)’:
+Graph.h:105:25: error: ‘v’ was not declared in this scope
+  105 |  void push_back(T* p) { v.push_back(p); owned.push_back(p); }
+      |                         ^
+Graph.h:105:41: error: ‘owned’ was not declared in this scope
+  105 |  void push_back(T* p) { v.push_back(p); owned.push_back(p); }
+      |                                         ^~~~~
+Graph.h: In member function ‘T& Graph_lib::Vector_ref<T>::operator[](int)’:
+Graph.h:109:33: error: ‘v’ was not declared in this scope
+  109 |  T& operator[](int i) { return *v[i]; }
+      |                                 ^
+Graph.h: In member function ‘const T& Graph_lib::Vector_ref<T>::operator[](int) const’:
+Graph.h:110:45: error: ‘v’ was not declared in this scope
+  110 |  const T& operator[](int i) const { return *v[i]; }
+      |                                             ^
+Graph.h: In member function ‘int Graph_lib::Vector_ref<T>::size() const’:
+Graph.h:111:28: error: ‘v’ was not declared in this scope
+  111 |  int size() const { return v.size(); }
+      |                            ^
+Graph.h: At global scope:
+Graph.h:119:24: error: expected ‘)’ before ‘<’ token
+  119 |  Shape(initializer_list<Point> lst);  // add() the Points to this Shape
+      |       ~                ^
+      |                        )
+Graph.h:158:2: error: ‘vector’ does not name a type
+  158 |  vector<Point> points; // not used by all shapes
+      |  ^~~~~~
+Graph.h:159:24: warning: narrowing conversion of ‘fl_color()’ from ‘Fl_Color’ {aka ‘unsigned int’} to ‘int’ [-Wnarrowing]
+  159 |  Color lcolor {fl_color()};
+      |                ~~~~~~~~^~
+Graph.h: In member function ‘void Graph_lib::Shape::add(Graph_lib::Point)’:
+Graph.h:125:21: error: ‘points’ was not declared in this scope; did you mean ‘point’?
+  125 |  void add(Point p){ points.push_back(p); }
+      |                     ^~~~~~
+      |                     point
+Graph.h: In member function ‘void Graph_lib::Shape::set_point(int, Graph_lib::Point)’:
+Graph.h:126:35: error: ‘points’ was not declared in this scope; did you mean ‘point’?
+  126 |  void set_point(int i, Point p) { points[i] = p; }
+      |                                   ^~~~~~
+      |                                   point
+Graph.h: In member function ‘Graph_lib::Point Graph_lib::Shape::point(int) const’:
+Graph.h:143:36: error: ‘points’ was not declared in this scope; did you mean ‘point’?
+  143 |  Point point(int i) const { return points[i]; }
+      |                                    ^~~~~~
+      |                                    point
+Graph.h: In member function ‘int Graph_lib::Shape::number_of_points() const’:
+Graph.h:144:44: error: ‘points’ was not declared in this scope; did you mean ‘point’?
+  144 |  int number_of_points() const { return int(points.size()); }
+      |                                            ^~~~~~
+      |                                            point
+Graph.h: In constructor ‘Graph_lib::Rectangle::Rectangle(Graph_lib::Point, int, int)’:
+Graph.h:192:21: error: ‘error’ was not declared in this scope; did you mean ‘perror’?
+  192 |   if (h<=0 || w<=0) error("Bad rectangle: non-positive side");
+      |                     ^~~~~
+      |                     perror
+Graph.h: In constructor ‘Graph_lib::Rectangle::Rectangle(Graph_lib::Point, Graph_lib::Point)’:
+Graph.h:197:21: error: ‘error’ was not declared in this scope; did you mean ‘perror’?
+  197 |   if (h<=0 || w<=0) error("Bad rectangle: first point is not top left");
+      |                     ^~~~~
+      |                     perror
+Graph.h: At global scope:
+Graph.h:238:24: error: expected ‘)’ before ‘<’ token
+  238 |  Lines(initializer_list<Point> lst) : Shape{lst} { if (lst.size() % 2) error("odd number of points for Lines"); }
+      |       ~                ^
+      |                        )
+Graph.h:238:50: error: expected unqualified-id before ‘{’ token
+  238 |  Lines(initializer_list<Point> lst) : Shape{lst} { if (lst.size() % 2) error("odd number of points for Lines"); }
+      |                                                  ^
+Graph.h:245:22: error: ‘string’ does not name a type; did you mean ‘stdin’?
+  245 |  Text(Point x, const string& s) : lab{ s } { add(x); }
+      |                      ^~~~~~
+      |                      stdin
+Graph.h:249:23: error: ‘string’ does not name a type; did you mean ‘stdin’?
+  249 |  void set_label(const string& s) { lab = s; }
+      |                       ^~~~~~
+      |                       stdin
+Graph.h:250:2: error: ‘string’ does not name a type; did you mean ‘stdin’?
+  250 |  string label() const { return lab; }
+      |  ^~~~~~
+      |  stdin
+Graph.h:258:2: error: ‘string’ does not name a type; did you mean ‘stdin’?
+  258 |  string lab; // label
+      |  ^~~~~~
+      |  stdin
+Graph.h: In constructor ‘Graph_lib::Text::Text(Graph_lib::Point, const int&)’:
+Graph.h:245:35: error: class ‘Graph_lib::Text’ does not have any field named ‘lab’
+  245 |  Text(Point x, const string& s) : lab{ s } { add(x); }
+      |                                   ^~~
+Graph.h: In member function ‘void Graph_lib::Text::set_label(const int&)’:
+Graph.h:249:36: error: ‘lab’ was not declared in this scope; did you mean ‘labs’?
+  249 |  void set_label(const string& s) { lab = s; }
+      |                                    ^~~
+      |                                    labs
+Graph.h: At global scope:
+Graph.h:267:70: error: ‘string’ has not been declared
+  267 |  Axis(Orientation d, Point xy, int length, int nummber_of_notches=0, string label = "");
+      |                                                                      ^~~~~~
+Graph.h:267:85: error: invalid conversion from ‘const char*’ to ‘int’ [-fpermissive]
+  267 |  Axis(Orientation d, Point xy, int length, int nummber_of_notches=0, string label = "");
+      |                                                                                     ^~
+      |                                                                                     |
+      |                                                                                     const char*
+Graph.h: In member function ‘Graph_lib::Point Graph_lib::Ellipse::focus1() const’:
+Graph.h:306:50: error: ‘sqrt’ was not declared in this scope
+  306 |  Point focus1() const { return{ center().x + int(sqrt(double(w*w - h*h))), center().y }; }
+      |                                                  ^~~~
+Graph.h:306:87: error: could not convert ‘{<expression error>, ((const Graph_lib::Ellipse*)this)->Graph_lib::Ellipse::center().Graph_lib::Point::y}’ from ‘<brace-enclosed initializer list>’ to ‘Graph_lib::Point’
+  306 |  Point focus1() const { return{ center().x + int(sqrt(double(w*w - h*h))), center().y }; }
+      |                                                                                       ^
+      |                                                                                       |
+      |                                                                                       <brace-enclosed initializer list>
+Graph.h: In member function ‘Graph_lib::Point Graph_lib::Ellipse::focus2() const’:
+Graph.h:307:50: error: ‘sqrt’ was not declared in this scope
+  307 |  Point focus2() const { return{ center().x - int(sqrt(double(w*w - h*h))), center().y }; }
+      |                                                  ^~~~
+Graph.h:307:87: error: could not convert ‘{<expression error>, ((const Graph_lib::Ellipse*)this)->Graph_lib::Ellipse::center().Graph_lib::Point::y}’ from ‘<brace-enclosed initializer list>’ to ‘Graph_lib::Point’
+  307 |  Point focus2() const { return{ center().x - int(sqrt(double(w*w - h*h))), center().y }; }
+      |                                                                                       ^
+      |                                                                                       |
+      |                                                                                       <brace-enclosed initializer list>
+Graph.h: At global scope:
+Graph.h:326:24: error: ‘string’ does not name a type; did you mean ‘stdin’?
+  326 |  Marked_polyline(const string& m) :mark(m) { }
+      |                        ^~~~~~
+      |                        stdin
+Graph.h:329:2: error: ‘string’ does not name a type; did you mean ‘stdin’?
+  329 |  string mark;
+      |  ^~~~~~
+      |  stdin
+Graph.h: In constructor ‘Graph_lib::Marked_polyline::Marked_polyline(const int&)’:
+Graph.h:326:36: error: class ‘Graph_lib::Marked_polyline’ does not have any field named ‘mark’
+  326 |  Marked_polyline(const string& m) :mark(m) { }
+      |                                    ^~~~
+Graph.h: At global scope:
+Graph.h:333:14: error: ‘string’ does not name a type; did you mean ‘stdin’?
+  333 |  Marks(const string& m) :Marked_polyline(m)
+      |              ^~~~~~
+      |              stdin
+Graph.h: In constructor ‘Graph_lib::Mark::Mark(Graph_lib::Point, char)’:
+Graph.h:338:33: error: ‘string’ was not declared in this scope; did you mean ‘stdin’?
+  338 |  Mark(Point xy, char c) : Marks(string(1,c)) {add(xy); }
+      |                                 ^~~~~~
+      |                                 stdin
+Graph.h: At global scope:
+Graph.h:361:37: error: ‘string’ does not name a type; did you mean ‘stdin’?
+  361 | Suffix::Encoding get_encoding(const string& s);
+      |                                     ^~~~~~
+      |                                     stdin
+Graph.h:364:18: error: ‘string’ has not been declared
+  364 |  Image(Point xy, string s, Suffix::Encoding e = Suffix::none);
+      |                  ^~~~~~
+Graph.cpp: In member function ‘virtual void Graph_lib::Shape::draw_lines() const’:
+Graph.cpp:8:32: error: ‘points’ was not declared in this scope; did you mean ‘point’?
+    8 |  if (color().visibility() && 1<points.size()) // draw sole pixel?
+      |                                ^~~~~~
+      |                                point
+Graph.cpp: At global scope:
+Graph.cpp:27:8: error: ‘pair’ does not name a type
+   27 | inline pair<double,double> line_intersect(Point p1, Point p2, Point p3, Point p4, bool& parallel)
+      |        ^~~~
+Graph.cpp: In function ‘bool Graph_lib::line_segment_intersect(Graph_lib::Point, Graph_lib::Point, Graph_lib::Point, Graph_lib::Point, Graph_lib::Point&)’:
+Graph.cpp:54:4: error: ‘pair’ was not declared in this scope; did you mean ‘std::pair’?
+   54 |    pair<double,double> u = line_intersect(p1,p2,p3,p4,parallel);
+      |    ^~~~
+      |    std::pair
+In file included from /usr/include/c++/9/bits/stl_algobase.h:64,
+                 from /usr/include/c++/9/vector:60,
+                 from Graph.h:6,
+                 from Graph.cpp:1:
+/usr/include/c++/9/bits/stl_pair.h:208:12: note: ‘std::pair’ declared here
+  208 |     struct pair
+      |            ^~~~
+Graph.cpp:54:9: error: expected primary-expression before ‘double’
+   54 |    pair<double,double> u = line_intersect(p1,p2,p3,p4,parallel);
+      |         ^~~~~~
+Graph.cpp:55:20: error: ‘u’ was not declared in this scope
+   55 |    if (parallel || u.first < 0 || u.first > 1 || u.second < 0 || u.second > 1) return false;
+      |                    ^
+Graph.cpp:56:28: error: ‘u’ was not declared in this scope
+   56 |    intersection.x = p1.x + u.first*(p2.x - p1.x);
+      |                            ^
+Graph.cpp: In member function ‘void Graph_lib::Polygon::add(Graph_lib::Point)’:
+Graph.cpp:66:23: error: ‘error’ was not declared in this scope; did you mean ‘perror’?
+   66 |   if (p==point(np-1)) error("polygon point equal to previous point");
+      |                       ^~~~~
+      |                       perror
+Graph.cpp:68:3: error: ‘line_intersect’ was not declared in this scope; did you mean ‘intersect’?
+   68 |   line_intersect(point(np-1),p,point(np-2),point(np-1),parallel);
+      |   ^~~~~~~~~~~~~~
+      |   intersect
+Graph.cpp:70:4: error: ‘error’ was not declared in this scope; did you mean ‘perror’?
+   70 |    error("two polygon points lie in a straight line");
+      |    ^~~~~
+      |    perror
+Graph.cpp:74:19: error: no matching function for call to ‘Graph_lib::Point::Point(int, int)’
+   74 |   Point ignore(0,0);
+      |                   ^
+In file included from Graph.h:5,
+                 from Graph.cpp:1:
+Point.h:9:8: note: candidate: ‘Graph_lib::Point::Point()’
+    9 | struct Point {
+      |        ^~~~~
+Point.h:9:8: note:   candidate expects 0 arguments, 2 provided
+Point.h:9:8: note: candidate: ‘constexpr Graph_lib::Point::Point(const Graph_lib::Point&)’
+Point.h:9:8: note:   candidate expects 1 argument, 2 provided
+Point.h:9:8: note: candidate: ‘constexpr Graph_lib::Point::Point(Graph_lib::Point&&)’
+Point.h:9:8: note:   candidate expects 1 argument, 2 provided
+Graph.cpp:76:4: error: ‘error’ was not declared in this scope; did you mean ‘perror’?
+   76 |    error("intersect in polygon");
+      |    ^~~~~
+      |    perror
+Graph.cpp: In member function ‘virtual void Graph_lib::Polygon::draw_lines() const’:
+Graph.cpp:86:31: error: ‘error’ was not declared in this scope; did you mean ‘perror’?
+   86 |   if (number_of_points() < 3) error("less than 3 points in a Polygon");
+      |                               ^~~~~
+      |                               perror
+Graph.cpp: In member function ‘virtual void Graph_lib::Shape::move(int, int)’:
+Graph.cpp:116:29: error: ‘points’ was not declared in this scope; did you mean ‘point’?
+  116 |  for (unsigned int i = 0; i<points.size(); ++i) {
+      |                             ^~~~~~
+      |                             point
+Graph.cpp: In member function ‘virtual void Graph_lib::Text::draw_lines() const’:
+Graph.cpp:135:10: error: ‘lab’ was not declared in this scope; did you mean ‘labs’?
+  135 |  fl_draw(lab.c_str(), point(0).x, point(0).y);
+      |          ^~~
+      |          labs
+Graph.cpp: In constructor ‘Graph_lib::Function::Function(double (*)(double), double, double, Graph_lib::Point, int, double, double)’:
+Graph.cpp:143:16: error: ‘error’ was not declared in this scope; did you mean ‘perror’?
+  143 |  if (r2-r1<=0) error("bad graphing range");
+      |                ^~~~~
+      |                perror
+Graph.cpp:144:16: error: ‘error’ was not declared in this scope; did you mean ‘perror’?
+  144 |  if (count<=0) error("non-positive graphing count");
+      |                ^~~~~
+      |                perror
+Graph.cpp:148:53: error: no matching function for call to ‘Graph_lib::Point::Point(int, int)’
+  148 |   add(Point(xy.x+int(r*xscale),xy.y-int(f(r)*yscale)));
+      |                                                     ^
+In file included from Graph.h:5,
+                 from Graph.cpp:1:
+Point.h:9:8: note: candidate: ‘Graph_lib::Point::Point()’
+    9 | struct Point {
+      |        ^~~~~
+Point.h:9:8: note:   candidate expects 0 arguments, 2 provided
+Point.h:9:8: note: candidate: ‘constexpr Graph_lib::Point::Point(const Graph_lib::Point&)’
+Point.h:9:8: note:   candidate expects 1 argument, 2 provided
+Point.h:9:8: note: candidate: ‘constexpr Graph_lib::Point::Point(Graph_lib::Point&&)’
+Point.h:9:8: note:   candidate expects 1 argument, 2 provided
+Graph.cpp: At global scope:
+Graph.cpp:168:56: error: ‘string’ has not been declared
+  168 | Axis::Axis(Orientation d, Point xy, int length, int n, string lab)
+      |                                                        ^~~~~~
+Graph.cpp: In constructor ‘Graph_lib::Axis::Axis(Graph_lib::Axis::Orientation, Graph_lib::Point, int, int, int)’:
+Graph.cpp:169:18: error: no matching function for call to ‘Graph_lib::Point::Point(int, int)’
+  169 |  :label(Point(0,0),lab)
+      |                  ^
+In file included from Graph.h:5,
+                 from Graph.cpp:1:
+Point.h:9:8: note: candidate: ‘Graph_lib::Point::Point()’
+    9 | struct Point {
+      |        ^~~~~
+Point.h:9:8: note:   candidate expects 0 arguments, 2 provided
+Point.h:9:8: note: candidate: ‘constexpr Graph_lib::Point::Point(const Graph_lib::Point&)’
+Point.h:9:8: note:   candidate expects 1 argument, 2 provided
+Point.h:9:8: note: candidate: ‘constexpr Graph_lib::Point::Point(Graph_lib::Point&&)’
+Point.h:9:8: note:   candidate expects 1 argument, 2 provided
+Graph.cpp:171:16: error: ‘error’ was not declared in this scope; did you mean ‘perror’?
+  171 |  if (length<0) error("bad axis length");
+      |                ^~~~~
+      |                perror
+Graph.cpp:175:37: error: no matching function for call to ‘Graph_lib::Point::Point(int, int&)’
+  175 |    Shape::add(Point(xy.x+length,xy.y)); // axis line
+      |                                     ^
+In file included from Graph.h:5,
+                 from Graph.cpp:1:
+Point.h:9:8: note: candidate: ‘Graph_lib::Point::Point()’
+    9 | struct Point {
+      |        ^~~~~
+Point.h:9:8: note:   candidate expects 0 arguments, 2 provided
+Point.h:9:8: note: candidate: ‘constexpr Graph_lib::Point::Point(const Graph_lib::Point&)’
+Point.h:9:8: note:   candidate expects 1 argument, 2 provided
+Point.h:9:8: note: candidate: ‘constexpr Graph_lib::Point::Point(Graph_lib::Point&&)’
+Point.h:9:8: note:   candidate expects 1 argument, 2 provided
+Graph.cpp:180:30: error: no matching function for call to ‘Graph_lib::Point::Point(int&, int&)’
+  180 |      notches.add(Point(x,xy.y),Point(x,xy.y-5));
+      |                              ^
+In file included from Graph.h:5,
+                 from Graph.cpp:1:
+Point.h:9:8: note: candidate: ‘Graph_lib::Point::Point()’
+    9 | struct Point {
+      |        ^~~~~
+Point.h:9:8: note:   candidate expects 0 arguments, 2 provided
+Point.h:9:8: note: candidate: ‘constexpr Graph_lib::Point::Point(const Graph_lib::Point&)’
+Point.h:9:8: note:   candidate expects 1 argument, 2 provided
+Point.h:9:8: note: candidate: ‘constexpr Graph_lib::Point::Point(Graph_lib::Point&&)’
+Point.h:9:8: note:   candidate expects 1 argument, 2 provided
+Graph.cpp:180:46: error: no matching function for call to ‘Graph_lib::Point::Point(int&, int)’
+  180 |      notches.add(Point(x,xy.y),Point(x,xy.y-5));
+      |                                              ^
+In file included from Graph.h:5,
+                 from Graph.cpp:1:
+Point.h:9:8: note: candidate: ‘Graph_lib::Point::Point()’
+    9 | struct Point {
+      |        ^~~~~
+Point.h:9:8: note:   candidate expects 0 arguments, 2 provided
+Point.h:9:8: note: candidate: ‘constexpr Graph_lib::Point::Point(const Graph_lib::Point&)’
+Point.h:9:8: note:   candidate expects 1 argument, 2 provided
+Point.h:9:8: note: candidate: ‘constexpr Graph_lib::Point::Point(Graph_lib::Point&&)’
+Point.h:9:8: note:   candidate expects 1 argument, 2 provided
+Graph.cpp:190:37: error: no matching function for call to ‘Graph_lib::Point::Point(int&, int)’
+  190 |    Shape::add(Point(xy.x,xy.y-length));
+      |                                     ^
+In file included from Graph.h:5,
+                 from Graph.cpp:1:
+Point.h:9:8: note: candidate: ‘Graph_lib::Point::Point()’
+    9 | struct Point {
+      |        ^~~~~
+Point.h:9:8: note:   candidate expects 0 arguments, 2 provided
+Point.h:9:8: note: candidate: ‘constexpr Graph_lib::Point::Point(const Graph_lib::Point&)’
+Point.h:9:8: note:   candidate expects 1 argument, 2 provided
+Point.h:9:8: note: candidate: ‘constexpr Graph_lib::Point::Point(Graph_lib::Point&&)’
+Point.h:9:8: note:   candidate expects 1 argument, 2 provided
+Graph.cpp:195:29: error: no matching function for call to ‘Graph_lib::Point::Point(int&, int&)’
+  195 |     notches.add(Point(xy.x,y),Point(xy.x+5,y));
+      |                             ^
+In file included from Graph.h:5,
+                 from Graph.cpp:1:
+Point.h:9:8: note: candidate: ‘Graph_lib::Point::Point()’
+    9 | struct Point {
+      |        ^~~~~
+Point.h:9:8: note:   candidate expects 0 arguments, 2 provided
+Point.h:9:8: note: candidate: ‘constexpr Graph_lib::Point::Point(const Graph_lib::Point&)’
+Point.h:9:8: note:   candidate expects 1 argument, 2 provided
+Point.h:9:8: note: candidate: ‘constexpr Graph_lib::Point::Point(Graph_lib::Point&&)’
+Point.h:9:8: note:   candidate expects 1 argument, 2 provided
+Graph.cpp:195:45: error: no matching function for call to ‘Graph_lib::Point::Point(int, int&)’
+  195 |     notches.add(Point(xy.x,y),Point(xy.x+5,y));
+      |                                             ^
+In file included from Graph.h:5,
+                 from Graph.cpp:1:
+Point.h:9:8: note: candidate: ‘Graph_lib::Point::Point()’
+    9 | struct Point {
+      |        ^~~~~
+Point.h:9:8: note:   candidate expects 0 arguments, 2 provided
+Point.h:9:8: note: candidate: ‘constexpr Graph_lib::Point::Point(const Graph_lib::Point&)’
+Point.h:9:8: note:   candidate expects 1 argument, 2 provided
+Point.h:9:8: note: candidate: ‘constexpr Graph_lib::Point::Point(Graph_lib::Point&&)’
+Point.h:9:8: note:   candidate expects 1 argument, 2 provided
+Graph.cpp:204:3: error: ‘error’ was not declared in this scope; did you mean ‘perror’?
+  204 |   error("z axis not implemented");
+      |   ^~~~~
+      |   perror
+Graph.cpp: In function ‘void Graph_lib::draw_mark(Graph_lib::Point, char)’:
+Graph.cpp:263:2: error: ‘string’ was not declared in this scope; did you mean ‘std::string’?
+  263 |  string m(1,c);
+      |  ^~~~~~
+      |  std::string
+In file included from /usr/include/c++/9/string:39,
+                 from /usr/include/c++/9/stdexcept:39,
+                 from /usr/include/c++/9/array:39,
+                 from /usr/include/c++/9/tuple:39,
+                 from /usr/include/c++/9/bits/stl_map.h:63,
+                 from /usr/include/c++/9/map:61,
+                 from Graph.cpp:2:
+/usr/include/c++/9/bits/stringfwd.h:79:33: note: ‘std::string’ declared here
+   79 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+Graph.cpp:264:10: error: ‘m’ was not declared in this scope
+  264 |  fl_draw(m.c_str(),xy.x-dx,xy.y+dy);
+      |          ^
+Graph.cpp: In member function ‘virtual void Graph_lib::Marked_polyline::draw_lines() const’:
+Graph.cpp:271:22: error: ‘mark’ was not declared in this scope; did you mean ‘Mark’?
+  271 |   draw_mark(point(i),mark[i%mark.size()]);
+      |                      ^~~~
+      |                      Mark
+Graph.cpp: At global scope:
+Graph.cpp:282:10: error: ‘string’ was not declared in this scope; did you mean ‘std::string’?
+  282 | std::map<string,Suffix::Encoding> suffix_map;
+      |          ^~~~~~
+      |          std::string
+In file included from /usr/include/c++/9/string:39,
+                 from /usr/include/c++/9/stdexcept:39,
+                 from /usr/include/c++/9/array:39,
+                 from /usr/include/c++/9/tuple:39,
+                 from /usr/include/c++/9/bits/stl_map.h:63,
+                 from /usr/include/c++/9/map:61,
+                 from Graph.cpp:2:
+/usr/include/c++/9/bits/stringfwd.h:79:33: note: ‘std::string’ declared here
+   79 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+Graph.cpp:282:33: error: template argument 1 is invalid
+  282 | std::map<string,Suffix::Encoding> suffix_map;
+      |                                 ^
+Graph.cpp:282:33: error: template argument 3 is invalid
+Graph.cpp:282:33: error: template argument 4 is invalid
+Graph.cpp: In function ‘int Graph_lib::init_suffix_map()’:
+Graph.cpp:286:20: error: assignment of read-only location ‘"jpg"[Graph_lib::suffix_map]’
+  286 |  suffix_map["jpg"] = Suffix::jpg;
+      |  ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+Graph.cpp:287:20: error: assignment of read-only location ‘"JPG"[Graph_lib::suffix_map]’
+  287 |  suffix_map["JPG"] = Suffix::jpg;
+      |  ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+Graph.cpp:288:21: error: assignment of read-only location ‘"jpeg"[Graph_lib::suffix_map]’
+  288 |  suffix_map["jpeg"] = Suffix::jpg;
+      |  ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+Graph.cpp:289:21: error: assignment of read-only location ‘"JPEG"[Graph_lib::suffix_map]’
+  289 |  suffix_map["JPEG"] = Suffix::jpg;
+      |  ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+Graph.cpp:290:20: error: assignment of read-only location ‘"gif"[Graph_lib::suffix_map]’
+  290 |  suffix_map["gif"] = Suffix::gif;
+      |  ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+Graph.cpp:291:20: error: assignment of read-only location ‘"GIF"[Graph_lib::suffix_map]’
+  291 |  suffix_map["GIF"] = Suffix::gif;
+      |  ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+Graph.cpp:292:20: error: assignment of read-only location ‘"bmp"[Graph_lib::suffix_map]’
+  292 |  suffix_map["bmp"] = Suffix::bmp;
+      |  ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+Graph.cpp:293:20: error: assignment of read-only location ‘"BMP"[Graph_lib::suffix_map]’
+  293 |  suffix_map["BMP"] = Suffix::bmp;
+      |  ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+Graph.cpp: At global scope:
+Graph.cpp:297:37: error: ‘string’ does not name a type; did you mean ‘stdin’?
+  297 | Suffix::Encoding get_encoding(const string& s)
+      |                                     ^~~~~~
+      |                                     stdin
+Graph.cpp: In function ‘Graph_lib::Suffix::Encoding Graph_lib::get_encoding(const int&)’:
+Graph.cpp:302:2: error: ‘string’ has not been declared
+  302 |  string::const_iterator p = find(s.begin(),s.end(),'.');
+      |  ^~~~~~
+Graph.cpp:303:6: error: ‘p’ was not declared in this scope
+  303 |  if (p==s.end()) return Suffix::none; // no suffix
+      |      ^
+Graph.cpp:303:11: error: request for member ‘end’ in ‘s’, which is of non-class type ‘const int’
+  303 |  if (p==s.end()) return Suffix::none; // no suffix
+      |           ^~~
+Graph.cpp:305:2: error: ‘string’ was not declared in this scope; did you mean ‘std::string’?
+  305 |  string suf(p+1,s.end());
+      |  ^~~~~~
+      |  std::string
+In file included from /usr/include/c++/9/string:39,
+                 from /usr/include/c++/9/stdexcept:39,
+                 from /usr/include/c++/9/array:39,
+                 from /usr/include/c++/9/tuple:39,
+                 from /usr/include/c++/9/bits/stl_map.h:63,
+                 from /usr/include/c++/9/map:61,
+                 from Graph.cpp:2:
+/usr/include/c++/9/bits/stringfwd.h:79:33: note: ‘std::string’ declared here
+   79 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+Graph.cpp:306:20: error: ‘suf’ was not declared in this scope
+  306 |  return suffix_map[suf];
+      |                    ^~~
+Graph.cpp: At global scope:
+Graph.cpp:309:21: error: ‘string’ does not name a type; did you mean ‘stdin’?
+  309 | bool can_open(const string& s)
+      |                     ^~~~~~
+      |                     stdin
+Graph.cpp: In function ‘bool Graph_lib::can_open(const int&)’:
+Graph.cpp:312:2: error: ‘ifstream’ was not declared in this scope; did you mean ‘std::ifstream’?
+  312 |  ifstream ff(s.c_str());
+      |  ^~~~~~~~
+      |  std::ifstream
+In file included from /usr/include/c++/9/bits/localefwd.h:41,
+                 from /usr/include/c++/9/string:43,
+                 from /usr/include/c++/9/stdexcept:39,
+                 from /usr/include/c++/9/array:39,
+                 from /usr/include/c++/9/tuple:39,
+                 from /usr/include/c++/9/bits/stl_map.h:63,
+                 from /usr/include/c++/9/map:61,
+                 from Graph.cpp:2:
+/usr/include/c++/9/iosfwd:162:34: note: ‘std::ifstream’ declared here
+  162 |   typedef basic_ifstream<char>   ifstream;
+      |                                  ^~~~~~~~
+Graph.cpp:313:9: error: ‘ff’ was not declared in this scope; did you mean ‘ffs’?
+  313 |  return ff;
+      |         ^~
+      |         ffs
+Graph.cpp: At global scope:
+Graph.cpp:319:24: error: ‘string’ has not been declared
+  319 | Image::Image(Point xy, string s, Suffix::Encoding e)
+      |                        ^~~~~~
+Graph.cpp: In constructor ‘Graph_lib::Image::Image(Graph_lib::Point, int, Graph_lib::Suffix::Encoding)’:
+Graph.cpp:320:21: error: invalid conversion from ‘const char*’ to ‘int’ [-fpermissive]
+  320 |  :w(0), h(0), fn(xy,"")
+      |                     ^~
+      |                     |
+      |                     const char*
+In file included from Graph.cpp:1:
+Graph.h:245:30: note:   initializing argument 2 of ‘Graph_lib::Text::Text(Graph_lib::Point, const int&)’
+  245 |  Text(Point x, const string& s) : lab{ s } { add(x); }
+      |                ~~~~~~~~~~~~~~^
+Graph.cpp:325:34: error: invalid conversion from ‘const char*’ to ‘int’ [-fpermissive]
+  325 |   fn.set_label("cannot open \""+s+'\"');
+      |                ~~~~~~~~~~~~~~~~~~^~~~~
+      |                                  |
+      |                                  const char*
+In file included from Graph.cpp:1:
+Graph.h:249:31: note:   initializing argument 1 of ‘void Graph_lib::Text::set_label(const int&)’
+  249 |  void set_label(const string& s) { lab = s; }
+      |                 ~~~~~~~~~~~~~~^
+Graph.cpp:334:27: error: request for member ‘c_str’ in ‘s’, which is of non-class type ‘int’
+  334 |   p = new Fl_JPEG_Image(s.c_str());
+      |                           ^~~~~
+Graph.cpp:337:26: error: request for member ‘c_str’ in ‘s’, which is of non-class type ‘int’
+  337 |   p = new Fl_GIF_Image(s.c_str());
+      |                          ^~~~~
+Graph.cpp:343:44: error: invalid conversion from ‘const char*’ to ‘int’ [-fpermissive]
+  343 |   fn.set_label("unsupported file type \""+s+'\"');
+      |                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+      |                                            |
+      |                                            const char*
+In file included from Graph.cpp:1:
+Graph.h:249:31: note:   initializing argument 1 of ‘void Graph_lib::Text::set_label(const int&)’
+  249 |  void set_label(const string& s) { lab = s; }
+      |                 ~~~~~~~~~~~~~~^
+Graph.cpp: In member function ‘virtual void Graph_lib::Image::draw_lines() const’:
+Graph.cpp:350:9: error: ‘const struct Graph_lib::Text’ has no member named ‘label’
+  350 |  if (fn.label()!="") fn.draw_lines();
+      |         ^~~~~
+In file included from Window.cpp:2:
+Graph.h:159:24: warning: narrowing conversion of ‘fl_color()’ from ‘Fl_Color’ {aka ‘unsigned int’} to ‘int’ [-Wnarrowing]
+  159 |  Color lcolor {fl_color()};
+      |                ~~~~~~~~^~
